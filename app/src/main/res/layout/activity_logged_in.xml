@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".LoggedInActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/uiTvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NAME"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/uiTvDisplayName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/uiTvName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/uiTvName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/uiTvAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AGE"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/uiTvName"
+        app:layout_constraintStart_toStartOf="@id/uiTvName"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/uiTvDisplayAge"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/uiTvAge"
+        app:layout_constraintEnd_toEndOf="@id/uiTvDisplayName"
+        app:layout_constraintTop_toTopOf="@id/uiTvAge" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/uiTvGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GENDER"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/uiTvAge"
+        app:layout_constraintStart_toStartOf="@id/uiTvAge"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/uiTvDisplayGender"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/uiTvGender"
+        app:layout_constraintEnd_toEndOf="@id/uiTvDisplayAge"
+        app:layout_constraintTop_toTopOf="@id/uiTvGender" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/uiTvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMAIL"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/uiTvGender"
+        app:layout_constraintStart_toStartOf="@id/uiTvGender"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/uiTvDisplayEmail"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/uiTvEmail"
+        app:layout_constraintEnd_toEndOf="@id/uiTvDisplayGender"
+        app:layout_constraintTop_toTopOf="@id/uiTvEmail" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/uiBtnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="LOGOUT"
+        app:layout_constraintTop_toBottomOf="@id/uiTvDisplayEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
