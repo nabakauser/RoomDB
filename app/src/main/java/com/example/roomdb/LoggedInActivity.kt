@@ -30,14 +30,16 @@ class LoggedInActivity : AppCompatActivity() {
       userViewModel.userData.observe(this){ users ->
           val userName = intent.getStringExtra("NAME")
           Log.d("listName", "listName: $userName")
-          //val user : User? = users.find { it.name == userName }
-          var user : User? = null
-          users.forEach {
-              if (it.name == userName) {
-                  user = it
-                  return@forEach
-              }
-          }
+          val user : User? = users.find { it.name == userName }
+//          var user : User? = null
+//          users.forEach {
+//              if (it.name == userName) {
+//                  user = it
+//                  return@forEach
+//              }
+//          }
+
+          
 //          val names = arrayListOf<String>()
 //          users.forEach {
 //              it.name?.let { it1 -> names.add(it1) }
@@ -49,9 +51,9 @@ class LoggedInActivity : AppCompatActivity() {
 
           binding?.uiTvDisplayName?.text = userName
           if (user != null) {
-              binding?.uiTvDisplayAge?.text = user?.age
-              binding?.uiTvDisplayGender?.text = user?.gender
-              binding?.uiTvDisplayEmail?.text = user?.email
+              binding?.uiTvDisplayAge?.text = user.age
+              binding?.uiTvDisplayGender?.text = user.gender
+              binding?.uiTvDisplayEmail?.text = user.email
           }
           //val currentItem= it.last()
           //binding?.uiTvDisplayName?.text = currentItem.name
